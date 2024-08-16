@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        LO<span>GO</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#planet">HOME</a></li>
+            <li><a href="#offers">OFFERS</a></li>
+            <li><a href="#" class="buy" id="openBuyNow">BUY NOW</a></li>
+            <li><a href="#about-us">ABOUT US</a></li>
+            <li><a href="#shop-now">SHOP NOW</a></li>
+            <li><a href="#" class="sign" id="openSignup">SIGN UP</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Planet Sections -->
+    <section class="planet" id="planet">
+        <div class="left">
+            <h1>MERCURY</h1>
+        </div>
+        <div class="mid">
+            <p>Mercury, the innermost planet of the solar system and the eighth in size and mass. Its closeness to the Sun and its smallness make it the most elusive of the planets visible to the unaided eye. Because its rising or setting is always within about two hours of the Sun’s, it is never observable when the sky is fully dark. Mercury is designated by the symbol ☿.
+                Mercury is the closest planet to the Sun, at a distance of 57.91 million kilometers / 35.98 miles or 0.4 AU away. It takes sunlight 3.2 minutes to travel from the Sun to Mercury.</p>
+            <button class="buy" id="openBuyNow" data-planet="Mercury">Buy</button>
+        </div>
+        <div class="right">
+            <img src="About.png" alt="Image of Mercury" class="img">
+        </div>
+    </section>
+
+    <section class="planet">
+        <div class="left">
+            <h1>JUPITER</h1>
+        </div>
+        <div class="mid">
+            <p>Jupiter is the largest planet in the solar system and is known for its prominent Great Red Spot. It is the fifth planet from the Sun and has a strong magnetic field. Jupiter is a gas giant with a mass more than 300 times that of Earth and is made up mostly of hydrogen and helium.</p>
+            <button class="buy" data-planet="Jupiter">Buy</button>
+        </div>
+        <div class="right">
+            <img src="jp.png" alt="Image of Jupiter" class="img">
+        </div>
+    </section>
+
+    <section class="planet">
+        <div class="left">
+            <h1>EARTH</h1>
+        </div>
+        <div class="mid">
+            <p>Earth is the third planet from the Sun and the only known place in the universe to harbor life. It has a diverse climate and is home to millions of species, including humans. Earth's atmosphere is rich in nitrogen and oxygen, which are essential for life as we know it.</p>
+            <button class="buy" data-planet="Earth">Buy</button>
+        </div>
+        <div class="right">
+            <img src="th.png" alt="Image of Earth" class="img">
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="about-us">
+        <div class="about-content">
+            <div class="about-text">
+                <h1>About Us</h1>
+                <p>Welcome to Planet Shop, your premier destination for exploring and purchasing unique planetary experiences. Our mission is to bring the wonders of our solar system closer to you, offering a diverse range of planetary information and buying options that cater to both enthusiasts and professionals alike.</p>
+                <p>Founded by a team of passionate astronomers and space enthusiasts, Planet Shop is dedicated to providing accurate, up-to-date information about the celestial bodies that fascinate us all. We believe that the universe should be accessible to everyone, and our goal is to make that a reality by offering a platform where you can learn, explore, and purchase planetary experiences with ease.</p>
+                <p>Our team works tirelessly to ensure that every product and piece of information on our site meets the highest standards of quality and accuracy. From the smallest details about Mercury to the expansive beauty of Jupiter, we strive to present our customers with a comprehensive and immersive experience.</p>
+                <p>Thank you for choosing Planet Shop as your guide to the cosmos. We look forward to embarking on this extraordinary journey with you.</p>
+            </div>
+            <div class="about-image">
+                <img src="about-us.jpg" alt="About Us Image">
+            </div>
+        </div>
+    </section>
+
+
+     <section id="offers" class="offers">
+        <h1>Special Offers</h1>
+        <div class="offer-container">
+            <div class="offer">
+                <h2>Discount on Mercury Tours</h2>
+                <p>Explore Mercury like never before with our special discount on guided tours. Limited time offer!</p>
+                <button class="buy" data-offer="Mercury Tours">Get Offer</button>
+            </div>
+            <div class="offer">
+                <h2>Free Jupiter Poster with Purchase</h2>
+                <p>Buy any Jupiter-related item and receive a stunning poster of Jupiter's Great Red Spot for free!</p>
+                <button class="buy" data-offer="Jupiter Poster">Get Offer</button>
+            </div>
+            <div class="offer">
+                <h2>Earth Day Celebration Sale</h2>
+                <p>Celebrate Earth Day with us! Enjoy exclusive discounts on Earth-themed products.</p>
+                <button class="buy" data-offer="Earth Day Sale">Get Offer</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    
+        <!-- Shop Now Section -->
+        <section id="shop-now" class="shop-now">
+            <h1>Explore Our Shop</h1>
+            <p>Discover a wide range of products related to planets and space exploration.</p>
+            <button id="shopNowButton">Shop Now</button>
+        </section>
+    
+    
+
+
+
+
+
+
+</main>
+
+<!-- Signup Modal -->
+<div id="signupModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeSignup">&times;</span>
+        <h2>Sign Up</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Buy Now Modal -->
+<div id="buyNowModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeBuyNow">&times;</span>
+        <h2>Buy Now</h2>
+        <form>
+            <label for="planet">Planet:</label>
+            <input type="text" id="planet" name="planet" readonly>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+            
+            <label for="address">Shipping Address:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
